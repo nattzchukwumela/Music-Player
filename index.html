@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Music Player">
+  <meta property="og:description" content="A simple Music Player">
+  <meta property="og:image" content="music.jpg">
+ 
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+ <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Simple Music Player</h1>
+  </header>
+  <main>
+   <section>
+    <div id="img-con">
+      <img src="bullet.jpg" id="img" alt=""/>
+    </div>
+    <div id="song-details">
+      <h2 id="artist">Imagine Dragons</h2>
+      <h3 id="song-title">Bullet In A Gun</h3>
+    </div>
+    <audio id="audio">
+     <source src="Bullet In A Gun.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="progressCon">
+    <input type="range" id="seekBar" value="0" />
+    </div>
+    <div id="btn-con">
+     <button class="btn" id="previous">
+   <a href="vin.html">
+    <img src="backward-step-solid.svg" /></a>
+     </button>
+    <button class="btn" id="backward">
+     <img src="backward-solid.svg"/>
+     </button>
+     <button class="btn" id="play">
+      <img  src="play-solid.svg" /> 
+     </button>
+      <button class="btn" id="pause">
+      <img  src="pause-solid.svg" /> 
+     </button>
+    <button class="btn" id="forward">
+      <img src="forward-solid.svg" />
+     </button>
+     <button class="btn" id="next">
+       <a href="dim.html">
+      <img src="forward-step-solid.svg" /></a>
+     </button>
+     <button class="btn" id="mute">
+      <img src="volume-xmark-solid.svg" id="muteBtn" />
+     </button>
+    </div>
+   </section>
+  </main>
+  <footer>
+    <p>Contact me at</p>
+    <h4>👉👉<a href="https://www.facebook.com/profile.php?id=100081841013286">Nattz Chukwumela</a>👈👈</h4>
+    
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

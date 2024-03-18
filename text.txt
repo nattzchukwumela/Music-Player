@@ -1,0 +1,67 @@
+// Get the audio element
+const audio = document.getElementById('myAudio');
+
+// Function to play the audio
+function playAudio() {
+  audio.play();
+}
+
+// Function to pause the audio
+function pauseAudio() {
+  audio.pause();
+}
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Song Duration Bar</title>
+  <style>
+    #duration-bar {
+      width: 300px;
+      height: 20px;
+      background-color: lightgray;
+    }
+    #progress-bar {
+      width: 0%;
+      height: 100%;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Song Duration Bar</h1>
+  <div id="duration-bar">
+    <div id="progress-bar"></div>
+  </div>
+
+  <script>
+    // Get the duration bar and progress bar elements
+    var durationBar = document.getElementById("duration-bar");
+    var progressBar = document.getElementById("progress-bar");
+
+    // Set the song duration in seconds
+    var songDuration = 180; // Example: 3 minutes
+
+    // Function to update the progress bar
+    function updateProgressBar(currentTime) {
+      var progress = (currentTime / songDuration) * 100;
+      progressBar.style.width = progress + "%";
+    }
+
+    // Simulate the song progress
+    var currentTime = 0;
+    var interval = setInterval(function() {
+      currentTime++;
+      updateProgressBar(currentTime);
+
+      // Stop the simulation when the song ends
+      if (currentTime >= songDuration) {
+        clearInterval(interval);
+      }
+    }, 1000); // Update every second
+  </script>
+</body>
+</html>

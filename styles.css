@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Sans-Serif;
+}
+header h1 {
+  text-align: center;
+  margin: 10px;
+}
+#song-details {
+  text-align: center;
+}
+#img-con {
+  width: 260px;
+  height: auto;
+  margin:0 auto;
+}
+#img {
+  max-width: 100%;
+  height: auto;
+  border:#333 2px solid;
+  border-radius: 3px;
+}
+#seekBar {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 70%;
+  height: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #4773A3;
+  margin:10px auto;
+  display: block;
+  outline: none;
+ }
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #AF9CFF;
+  height: 20px;
+  width: 20px;
+  border:2px solid #333;
+  box-shadow: 0 5px 5px rgba(255, 200, 200, 0.7);
+  border-radius: 50%;
+}
+#btn-con {
+  width: 80%;
+  height: 40px;
+  border: solid 2px #000;
+  margin:10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 30px;
+  height: 30px;
+  border: solid 1px #FF5B2A;
+  border-radius: 3px;
+  text-align: center;
+  margin:0 3px;
+  transition: transform 0.1s, background 0.1s;
+  }
+  .btn:active {
+    transform: scale(1.1);
+    background: #742BFF;
+  }
+ #pause {
+   display: none;
+ }
+ footer {
+  text-align: center;
+ }
+ h4 a{
+   color: teal;
+   text-decoration: none;
+   border: 2px solid #888;
+   border-radius: 3px;
+   padding:2px;
+   margin:5px 2px;
+   display:inline-block;
+ }
+ 
