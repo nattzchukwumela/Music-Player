@@ -8,8 +8,8 @@
   <meta property="og:image" content="music.jpg">
  
   <title>Music Player</title>
-  <link rel="stylesheet" href="styles.css">
- <script src="script.js" defer></script>
+  <link rel="stylesheet" href="./css/styles.css">
+ <script src="./js/script.js" defer></script>
 </head>
 <body>
   <header>
@@ -18,14 +18,14 @@
   <main>
    <section>
     <div id="img-con">
-      <img src="Dim.jpeg" id="img" alt=""/>
+      <img src="./cover-art/Dim.jpeg" id="img" alt=""/>
     </div>
     <div id="song-details">
       <h2 id="artist">Starset</h2>
       <h3 id="song-title">My Demons</h3>
     </div>
     <audio id="audio">
-     <source src="dim.m4a" type="audio/mpeg" />
+     <source src="./music/dim.m4a" type="audio/mpeg" />
     </audio>
     <div id="progressCon">
     <input type="range" id="seekBar" value="0" />
@@ -33,26 +33,26 @@
     <div id="btn-con">
      <button class="btn" id="previous">
    <a href="index.html">
-    <img src="backward-step-solid.svg" /></a>
+    <img src="./icons/backward-step-solid.svg" /></a>
      </button>
     <button class="btn" id="backward">
-     <img src="backward-solid.svg"/>
+     <img src="./icons/backward-solid.svg"/>
      </button>
      <button class="btn" id="play">
-      <img  src="play-solid.svg" /> 
+      <img  src="./icons/play-solid.svg" /> 
      </button>
       <button class="btn" id="pause">
-      <img  src="pause-solid.svg" /> 
+      <img  src="./icons/pause-solid.svg" /> 
      </button>
     <button class="btn" id="forward">
-      <img src="forward-solid.svg" />
+      <img src="./icons/forward-solid.svg" />
      </button>
      <button class="btn" id="next">
        <a href="vin.html">
-      <img src="forward-step-solid.svg" /></a>
+      <img src="./icons/forward-step-solid.svg" /></a>
      </button>
      <button class="btn" id="mute">
-      <img src="volume-xmark-solid.svg" id="muteBtn" />
+      <img src="./icons/volume-xmark-solid.svg" id="muteBtn" />
      </button>
     </div>
    </section>
