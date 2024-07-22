@@ -1,10 +1,10 @@
-const btnPlay = document.getElementById('play');
-const btnPause = document.getElementById('pause');
-const seekBar = document.getElementById('seekBar');
-const audio = document.getElementById('audio');
-const forward = document.getElementById('forward');
-const backward = document.getElementById('backward');
-const mute = document.getElementById('mute');
+const btnPlay = document.getElementById('play') as HTMLButtonElement;
+const btnPause = document.getElementById('pause') as HTMLButtonElement;
+const seekBar = document.getElementById('seekBar') as HTMLInputElement;
+const audio = document.getElementById('audio') as HTMLAudioElement;
+const forward = document.getElementById('forward') as HTMLButtonElement;
+const backward = document.getElementById('backward') as HTMLButtonElement;
+const mute = document.getElementById('mute') as HTMLButtonElement;
 
 
 btnPlay.addEventListener("click", function() {
@@ -23,14 +23,14 @@ btnPause.addEventListener("click", function() {
 audio.addEventListener('timeupdate', updateSeekbar);
 
 function updateSeekbar() {
-  seekBar.max = audio.duration;
-  seekBar.value = audio.currentTime;
+	seekBar.max = audio.duration.toString();
+  seekBar.value = audio.currentTime.toString();
 }
 // progress bar can now seek at anypoint when clicked
 
 seekBar.onchange = () => {
   audio.play();
-  audio.currentTime = seekBar.value;
+  audio.currentTime = parseFloat(seekBar.value);
 };
 
 forward.addEventListener("click", () => {
@@ -44,7 +44,7 @@ backward.addEventListener("click", () => {
 });
 
 mute.addEventListener("click", function toggleMute() {
- let muteBtn = document.getElementById('muteBtn');
+ let muteBtn = document.getElementById('muteBtn') as HTMLImageElement;
  if(audio.muted) {
  muteBtn.src = "volume-xmark-solid.svg";
  } else {
